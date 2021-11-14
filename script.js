@@ -26,6 +26,24 @@ form.addEventListener('submit', function (e) {
   if (name.value === '') {
       showError(name, "Your name is required")
   } else {
-      showSuccess (name)
+      showSuccess(name)
   }
+
+  if (email.value === '') {
+    showError(email, "Your email is required")
+} else {
+    showSuccess(email)
+}
+
+if (password.value === '') {
+    showError(password, "Your password is required")
+} else {
+    showSuccess(password)
+}
+
+if (password2.value === '') {
+    showError(password2, "Confirm password required")
+} else {
+    showSuccess(password2)
+}
 });
