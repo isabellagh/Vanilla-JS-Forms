@@ -8,6 +8,14 @@ const password2 = document.getElementById("password2");
 function showError(input, message) {
     const formControl = input.parentElement
     formControl.className = 'form-control error'
+    const small = formControl.querySelector('small')
+    small.innerText = message
+}
+
+// show success outline
+function showSuccess(input) {
+    const formControl = input.parentElement
+    formControl.className = 'form-control success'
 }
 
 // Event listeners
@@ -16,7 +24,7 @@ form.addEventListener('submit', function (e) {
   e.preventDefault();
 
   if (name.value === '') {
-      showError(name, "Name is required")
+      showError(name, "Your name is required")
   } else {
       showSuccess (name)
   }
